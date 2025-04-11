@@ -1,0 +1,22 @@
+.grid-container {
+    display: grid;
+  }
+
+.grid-item:nth-child(odd) {
+    background-color: #e9e9e9;
+}
+
+.grid-item:nth-child(even) {
+    background-color: #e9e9;
+}
+
+.grid-container {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+
+@media (min-width: 600px) {
+    .grid-container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
