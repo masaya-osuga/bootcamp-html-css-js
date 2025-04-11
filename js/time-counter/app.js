@@ -4,19 +4,18 @@ const resetButton = document.querySelector("#reset");
 
 let count = 0;
 
-function updateCount(){
+const updateCount = () => {
     count++;
     number.innerText = count;
-}
+};
 
-function incrementCount(){
-    setTimeout(updateCount, 1000);
-}
-
-function resetCount(){
+const resetCount = () => {
     count = 0;
     number.innerText = count;
-}
+};
 
-secondButton.addEventListener('click', incrementCount);
+secondButton.addEventListener('click', () => {
+    setTimeout(updateCount, 1000);
+});
+
 resetButton.addEventListener('click', resetCount);

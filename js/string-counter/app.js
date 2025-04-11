@@ -4,21 +4,22 @@ const resetButton = document.querySelector("#reset");
 
 let count = 0;
 
-function updateCounter () {
+const updateCounter = () => {
     number.innerText = count;
 }
 
-function wordCounter(){
+const wordCounter = () => {
     const text = input.value;
     count = text.length;
     updateCounter();
 }
 
-function reset(){
+const reset = () => {
     count = 0;
     input.value = '';
     updateCounter();
 }
+
 
 
 input.addEventListener('input', wordCounter);

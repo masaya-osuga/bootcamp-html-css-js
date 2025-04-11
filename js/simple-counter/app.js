@@ -5,15 +5,16 @@ const resetButton = document.querySelector('.reset');
 
 let count = 0;
 
-function updateNumber() {
+const updateNumber = () => {
   number.innerText = count;
 }
-function increment() {
+
+const increment = () => {
   count++;
   updateNumber();
 }
 
-function reset(){
+const reset = () => {
   count = 0;
   updateNumber();
 }
